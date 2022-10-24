@@ -23,6 +23,20 @@ class ItemsController extends Controller
 
     }
 
+    public function contactUs(){
+
+        return view("pages.contactUs");
+
+    }
+
+
+    public function aboutUs(){
+
+        return view("pages.aboutUs");
+
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *

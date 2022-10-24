@@ -26,6 +26,9 @@ Route::get('/dashboard', function () {
 Route::get('/home', [ItemsController::class, 'home'])->name('home');
 Route::get('/items', [ItemsController::class, 'items'])->name('items');
 Route::get('/basket', [OrdersController::class, 'basket'])->name('basket');
+Route::get('/contactus', [ItemsController::class, 'contactUs'])->name('contactUs');
+Route::get('/aboutus', [ItemsController::class, 'aboutUs'])->name('aboutUs');
+
 
 
 
