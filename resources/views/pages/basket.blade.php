@@ -1,3 +1,3 @@
 <x-app-layout>
-    basket page
+    basket page to do
 </x-app-layout>
