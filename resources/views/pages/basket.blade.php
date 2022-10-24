@@ -1,3 +1,3 @@
 <x-app-layout>
-    basket page to do
+    basket page todo
 </x-app-layout>
