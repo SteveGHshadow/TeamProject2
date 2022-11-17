@@ -16,9 +16,11 @@ Step 5: In one command line type in ```php artisan serve```
 Step 6: In the second command line type in ```npm run dev```
         This actively updates the website while you make changes to the code
 
-Step 7: ???
+Step 7: Launch the program XAMPP and tick start for both Apache and MySQL
 
-Step 8: Profit
+Step 8: ???
+
+Step 9: Profit
 
 And that is how you launch the website
 
