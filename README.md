@@ -25,6 +25,10 @@ Step 9: Profit
 And that is how you launch the website
 
 
+Also make sure **not** to push to main but make a thread
+Thank you
+
+
 
 
 
