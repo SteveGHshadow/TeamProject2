@@ -18,9 +18,11 @@ Step 6: In the second command line type in ```npm run dev```
 
 Step 7: Launch the program XAMPP and tick start for both Apache and MySQL
 
-Step 8: ???
+Step 8: In google chrome (or whatever browser you are using) in the url section enter localhost:8000
 
-Step 9: Profit
+Step 9: ???
+
+Step 10: Profit
 
 And that is how you launch the website
 
