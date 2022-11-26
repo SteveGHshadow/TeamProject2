@@ -2,24 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Items;
+use App\Models\PastOrders;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class ItemsController extends Controller
+class PastOrdersController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function items()
+    public function index()
     {
-        $items = DB::table("items")->select("id","Name","productType","Size","Price","Description","Image")->where("Size", "=" ,"M")->get();
-        return view("pages.items")->with("items",$items);
+        //
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -45,10 +42,10 @@ class ItemsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Items  $items
+     * @param  \App\Models\PastOrders  $pastOrders
      * @return \Illuminate\Http\Response
      */
-    public function show(Items $items)
+    public function show(PastOrders $pastOrders)
     {
         //
     }
@@ -56,10 +53,10 @@ class ItemsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Items  $items
+     * @param  \App\Models\PastOrders  $pastOrders
      * @return \Illuminate\Http\Response
      */
-    public function edit(Items $items)
+    public function edit(PastOrders $pastOrders)
     {
         //
     }
@@ -68,10 +65,10 @@ class ItemsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Items  $items
+     * @param  \App\Models\PastOrders  $pastOrders
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Items $items)
+    public function update(Request $request, PastOrders $pastOrders)
     {
         //
     }
@@ -79,10 +76,10 @@ class ItemsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Items  $items
+     * @param  \App\Models\PastOrders  $pastOrders
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Items $items)
+    public function destroy(PastOrders $pastOrders)
     {
         //
     }

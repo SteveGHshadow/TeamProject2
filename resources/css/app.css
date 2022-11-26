@@ -1,3 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: "ChollaBold";
+    src: url("Fonts/ChollaSlabBold.ttf")
+}
+
+@font-face {
+    font-family: "Nerko";
+    src: url("Fonts/NerkoOne-Regular.ttf")
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    line-height: 1.5;
+
+}
+
+#uniTitle  p{
+    font-size: 1.5em;
+    font-family: "Times New Roman";
+    /*margin-right: 20px;*/
+}
+
+#nav-bar{
+    font-family: ChollaBold;
+}
+
+body{
+    width: 100%;
+    min-height: 10vh;
+    background-color: white;
+
+}
+.about{
+    width: 100%;
+}
+.about h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 70px;
+}
+.content{
+    padding: 0px 60px;
+    margin: 60px auto;
+
+
+
+}
+.text{
+    width: 60%;
+    float: left;
+    text-align: left;
+    padding: 0px 30px;
+
+}
+.image-section{
+    width: 40%;
+    float: right;
+    padding: 0px 30px;
+}
+.image-section img{
+    max-width: 70%;
+    height: auto;
+
+}
+.text h2{
+    letter-spacing: 1.5px;
+
+
+}
+.text p{
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+#websiteTitle{
+    font-family: Ral;
+}
