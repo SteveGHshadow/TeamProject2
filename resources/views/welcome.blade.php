@@ -22,15 +22,18 @@
             display: flex;
             min-height: 50vh;
             font-size: xx-large;
+            background: linear-gradient(to right, #44AA99, #CC6677);
         }
 
         .welcome-page{
             display: block;
             text-align: center;
             width: 500px;
-            background: #4a5568;
+            background: rgb(17,119,51, 0.3);
             padding: 4rem;
             border-radius: 10px;
+
+
 
         }
 
@@ -46,7 +49,7 @@
 <body class="antialiased">
 <div class="welcome-page">
     <div class="startPage-logo">
-        <img src="{{URL::asset('/image/Logo.png')}}" alt="profile Pic" height="100" width="100">
+        <img src="{{URL::asset('/image/TeamLogo.png')}}" alt="profile Pic" height="500" width="500">
     </div>
     <div class="startPageText">
         <h1>Welcome to Uni Style</h1>

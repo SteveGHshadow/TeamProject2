@@ -29,10 +29,20 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/home', [HomePageController::class, 'home'])->name('home');
-Route::get('/items', [ItemsController::class, 'items'])->name('items');
+
 Route::get('/basket', [BasketController::class, 'basket'])->name('basket');
+Route::post('/addToBasket', [BasketController::class, 'addToBasket'])->name('addToBasket');
+Route::post('/removeFromBasket', [BasketController::class, 'removeFromBasket'])->name('removeFromBasket');
+
 Route::get('/contactus', [ContactUsController::class, 'contactUs'])->name('contactUs');
+
 Route::get('/aboutus', [AboutUsController::class, 'aboutUs'])->name('aboutUs');
+
+Route::get('/items', [ItemsController::class, 'items'])->name('items');
+
+Route::get('/pastOrders', [PastOrdersController::class, 'pastOrders'])->name('pastOrders');
+Route::post('/pastOrders', [PastOrdersController::class, 'addToPastOrders'])->name('addToPastOrders');
+
 
 
 

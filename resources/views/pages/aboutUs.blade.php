@@ -1,15 +1,13 @@
 <x-app-layout>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Us</title>
-    </head>
+    <x-slot name="header">
+        <h2 class="headerFont  font-semibold text-gray-800 leading-tight">
+            {{ __('About Us') }}
+        </h2>
+    </x-slot>
     <body>
     <div class = "about" >
-        <h1>About us</h1>
-        <div class="content">
-            <div class="text">
+        <div class="AboutUscontent">
+            <div class="aboutUsText">
                 <h2>We UniStyle are here to provide the best customer service for you! </h2>
 
 

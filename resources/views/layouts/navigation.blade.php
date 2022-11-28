@@ -12,7 +12,7 @@
                 </div>
                 <div id="uniTitle" class="shrink-0 flex items-center">
                     <a href="{{ route('home') }}">
-                        <p id="websiteTitle" class="pl-10">Uni Style</p>
+                        <p id="websiteTitle" class="pl-10">UniSTYLE</p>
                     </a>
                 </div>
 
@@ -33,23 +33,19 @@
 {{--                                                </button>--}}
                     </form>
                         <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                            {{ __('Dashboard') }}
+                            {{ __('Home') }}
                         </x-nav-link>
                         <x-nav-link :href="route('items')" :active="request()->routeIs('items')">
                             {{ __('Items') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('aboutUs')" :active="request()->routeIs('aboutUs')">
-                            {{ __('About Us') }}
-                        </x-nav-link>
-
                 </div>
             </div>
 
             <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ml-6 space-x-4 ">
+            <div id="nav-bar" class="hidden sm:flex sm:items-center sm:ml-6 space-x-4 ">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                        <button class="flex items-center text-[20px] font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                             @auth()
                             <div>{{ Auth::user()->name }}</div>
                             @endauth
@@ -63,6 +59,14 @@
                     </x-slot>
 
                     <x-slot name="content">
+                        <form action="{{ route('pastOrders') }}" method="post">
+                            @csrf
+                            <x-dropdown-link :href="route('pastOrders')">
+                                {{ __('My Orders') }}
+                            </x-dropdown-link>
+                        </form>
+
+
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -101,7 +105,7 @@
         </div>
 
         <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
+        <div id="nav-bar" class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
                 @auth()
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
@@ -127,15 +131,15 @@
 
 
 </nav>
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 absolute bottom-0 w-full p-3">
-    <footer class="sm:-my-px sm:ml-10 sm:flex">
+<nav x-data="{ open: false }" class="fixed inset-x-0 bottom-0 bg-white border-b border-gray-100 bottom-0 w-full p-3">
+    <footer class="fixed inset-x-0 bottom-0 sm:-my-px sm:ml-10 sm:flex content-end justify-end  mr-20 ">
         <div class="flex">
             <!-- Navigation Links -->
-            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-nav-link :href="route('items')" :active="request()->routeIs('items')">
+            <div id="nav-bar" class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
+                <x-nav-link :href="route('aboutUs')" :active="request()->routeIs('aboutUs')">
                     {{ __('About Us') }}
                 </x-nav-link>
-                <x-nav-link :href="route('aboutUs')" :active="request()->routeIs('aboutUs')">
+                <x-nav-link :href="route('contactUs')" :active="request()->routeIs('contactUs')">
                     {{ __('Contact Us') }}
                 </x-nav-link>
 

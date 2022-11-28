@@ -15,8 +15,10 @@ class ItemsController extends Controller
      */
     public function items()
     {
-        $items = DB::table("items")->select("id","Name","productType","Size","Price","Description","Image")->where("Size", "=" ,"M")->get();
+        $items = DB::table("items")->select("id","Name","ProductType","Size","Price","Description","Image")->where("Size", "=" ,"M")->get();
+        session()->flash("Success", "Item has been added to your basket");
         return view("pages.items")->with("items",$items);
+
     }
 
 
@@ -28,7 +30,7 @@ class ItemsController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -37,6 +39,8 @@ class ItemsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
     public function store(Request $request)
     {
         //

@@ -12,23 +12,23 @@
 }
 
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    line-height: 1.5;
 
-}
 
 #uniTitle  p{
     font-size: 1.5em;
-    font-family: "Times New Roman";
-    /*margin-right: 20px;*/
+    font-family: "Comic Sans MS";
+    margin-right: 20px;
 }
 
 #nav-bar{
-    font-family: ChollaBold;
+    font-family: "Arial";
+    font-size: xx-large;
 }
+
+.headerFont {
+    font-family: "Times New Roman";
+}
+
 
 body{
     width: 100%;
@@ -47,14 +47,14 @@ body{
     letter-spacing: 1.5px;
     margin-top: 70px;
 }
-.content{
+.AboutUscontent{
     padding: 0px 60px;
     margin: 60px auto;
 
 
 
 }
-.text{
+.aboutUsText{
     width: 60%;
     float: left;
     text-align: left;
@@ -71,16 +71,16 @@ body{
     height: auto;
 
 }
-.text h2{
+.aboutUsText h2{
     letter-spacing: 1.5px;
 
 
 }
-.text p{
+.aboutUsText p{
     font-size: 17px;
     margin-top: 20px;
 }
 
 #websiteTitle{
-    font-family: Ral;
+    font-family: Ral, serif;
 }
