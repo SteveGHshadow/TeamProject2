@@ -32,7 +32,6 @@
             <img src="{{URL::asset('/image/hoodie-y.png')}}" alt="Hoodie Pic">
         </div>
 
-
     </div>
 
     </body>
