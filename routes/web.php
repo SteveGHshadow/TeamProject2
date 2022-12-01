@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\OrdersController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,8 @@ Route::get('/home', [HomePageController::class, 'home'])->name('home');
 Route::get('/basket', [BasketController::class, 'basket'])->name('basket');
 Route::post('/addToBasket', [BasketController::class, 'addToBasket'])->name('addToBasket');
 Route::post('/removeFromBasket', [BasketController::class, 'removeFromBasket'])->name('removeFromBasket');
+Route::post('/updateSizeBasket', [BasketController::class, 'updateSizeBasket'])->name('updateSizeBasket');
+
 
 Route::get('/contactus', [ContactUsController::class, 'contactUs'])->name('contactUs');
 
@@ -42,6 +45,11 @@ Route::get('/items', [ItemsController::class, 'items'])->name('items');
 
 Route::get('/pastOrders', [PastOrdersController::class, 'pastOrders'])->name('pastOrders');
 Route::post('/pastOrders', [PastOrdersController::class, 'addToPastOrders'])->name('addToPastOrders');
+
+Route::get('/admin', [AdminController::class, 'adminPage'])->name('adminPage');
+
+
+
 
 
 

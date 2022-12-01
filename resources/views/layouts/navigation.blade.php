@@ -55,10 +55,21 @@
                                 </svg>
                             </div>
                         </button>
-
                     </x-slot>
 
+
                     <x-slot name="content">
+                        @if(Auth::user()->admin == 1)
+                            <form action="{{ route('adminPage') }}" method="get">
+                                @csrf
+                                <x-dropdown-link :href="route('adminPage')">
+                                    {{ __('Admin Page') }}
+                                </x-dropdown-link>
+                            </form>
+                        @endif
+
+
+
                         <form action="{{ route('pastOrders') }}" method="post">
                             @csrf
                             <x-dropdown-link :href="route('pastOrders')">

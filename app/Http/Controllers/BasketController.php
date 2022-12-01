@@ -48,6 +48,15 @@ class BasketController extends Controller
     }
 
 
+    public function updateSizeBasket(Request $request)
+    {
+        $item_id = $request -> id;
+        $Size = $request -> Size;
+        DB::table("orders")->where("id",$item_id)->update(["Size" => $Size]);
+        return redirect()->route("basket");
+
+    }
+
 
     /**
      * Show the form for creating a new resource.

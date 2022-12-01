@@ -23,6 +23,7 @@
             min-height: 50vh;
             font-size: xx-large;
             background: linear-gradient(to right, #44AA99, #CC6677);
+
         }
 
         .welcome-page{

@@ -17,7 +17,7 @@ class PastOrdersController extends Controller
      */
     public function pastOrders()
     {
-        $pastOrders = DB::table("orders")->select("id","users_id","items_id","Name","ProductType","Size","Price","Description","Image")->where("users_id", "=", Auth::user()->id)->get();
+        $pastOrders = DB::table("orders")->select ("id","users_id","items_id","Name","ProductType","Size","Price","Description","Image")->where("users_id", "=", Auth::user()->id)->get();
         return view("pages.pastOrders")->with("orders",$pastOrders);
     }
 

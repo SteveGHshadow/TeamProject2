@@ -2,23 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\HomePage;
+use App\Models\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class HomePageController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function home(){
+    public function adminPage()
+    {
+        $users = DB::table("users")->select("id","name","email","password")->get();
+        $orders = DB::table("orders")->select("id","users_id","items_id","Name","ProductType","Size","Price","Description","Image")->get();
+        $stocks = DB::table("adminorders")->select("id","Name","ProductType","stocked")->get();
 
-        $items = DB::table("items")->select("id","Image")->where("id", "=" ,rand(1,36))->get();
-        return view("dashboard")->with("items",$items);
+//        return view("pages.admin")->with("orders,$orders")->with("users",$users);
+//        return view("pages.admin")->with("admin",$users);
+        return view("pages.admin")->with("admin",$orders)->with("users", $users)->with("stocks",$stocks);
+
+
 
     }
 
@@ -46,10 +53,10 @@ class HomePageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\HomePage  $homePage
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(HomePage $homePage)
+    public function show(Admin $admin)
     {
         //
     }
@@ -57,10 +64,10 @@ class HomePageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\HomePage  $homePage
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(HomePage $homePage)
+    public function edit(Admin $admin)
     {
         //
     }
@@ -69,10 +76,10 @@ class HomePageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\HomePage  $homePage
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HomePage $homePage)
+    public function update(Request $request, Admin $admin)
     {
         //
     }
@@ -80,10 +87,10 @@ class HomePageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\HomePage  $homePage
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(HomePage $homePage)
+    public function destroy(Admin $admin)
     {
         //
     }
